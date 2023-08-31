@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fingerprint Scanner Game</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css?val=1" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <h1 class="text-center my-3">Fingerprint Scanner Game</h1>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="game-board card shadow p-4">
+            <div class="header d-flex justify-content-between mb-5">
+              <div class="game-name d-flex align-items-end">
+                <img src="imgs/fingerprints/fb-1.png" class="me-2" height="70" alt="" />
+                <span class="border-bottom fs-3 fw-bold">Match Your Fingerprint</span>
+              </div>
+              <!-- <div class="controls d-flex">
+                <div class="attempts main-border me-3 align-self-end p-1">Attempts <span>3</span></div>
+                <div class="timer main-border me-3 align-self-end p-1">Timer: <span>20</span></div>
+                <div class="score main-border align-self-end p-1">Score: <span>0</span></div>
+              </div> -->
+            </div>
+            <div class="main-game d-flex">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="suspect-container p-3 mb-1">
+                            <!-- 0<div class="main-border title">SUSPECTED</div> -->
+                            <div class="suspected-img-box main-border img-box m-2 p-2">
+                              <img id="suspected-img" src="imgs/fingerprints/fb-1.png" class="opacity-0" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="perpetrator-container p-3 mb-1">
+                            <!-- <div class="main-border title">perpetrator</div> -->
+                            <div class="perpetrator-img-box main-border img-box m-2 p-2">
+                              <img id="perpetrator-img" src="imgs/fingerprints/fb-1.png" alt="" />
+                              <img id="scanGif" class="d-none" src="imgs/scan.gif" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="submitButtonContainer" class="button-container p-2 mx-auto">
+                      <button class="submitButton button btn" disabled>Inspect</button>
+                    </div>
+                  </div>
+                  <div class="col-5 ms-auto">
+                    <div class="fingerprints main-border p-3">
+                      <div class="row">
+                        <div class="col-4 mb-3">
+                          <div class="fingerprint img-box p-3 main-border">
+                            <img src="imgs/fingerprints/fb-1.png" />
+                          </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <div class="fingerprint img-box p-3 main-border">
+                            <img src="imgs/fingerprints/fb-1.png" />
+                          </div>
+                        </div>
+                        <div class="col-4 mb-3">
+                          <div class="fingerprint img-box p-3 main-border">
+                            <img src="imgs/fingerprints/fb-1.png" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="correctPopup" class="popup card">
+                <h2>Correct</h2>
+                <div class="button-container p-2 mx-auto">
+                  <button class="generateButton button btn">Play Again</button>
+                </div>
+              </div>
+              <div id="failPopup" class="popup card">
+                <h2>you failed</h2>
+                <div class="button-container p-2 mx-auto">
+                  <button class="generateButton button btn">Play Again</button>
+                </div>
+              </div>
+              <div id="wrongPopup" class="popup">
+                <h2>wrong</h2>
+              </div>
+              <div id="timeoutPopup" class="popup card">
+                <h2>Everyone has a unique fingerprint</h2>
+                <div class="button-container p-2 mx-auto">
+                  <button class="generateButton button btn">Play Again</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/main.js?val=1"></script>
+  </body>
+</html>
